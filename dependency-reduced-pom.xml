@@ -8,7 +8,7 @@
     <plugins>
       <plugin>
         <artifactId>maven-shade-plugin</artifactId>
-        <version>2.4.3</version>
+        <version>${maven-shade.plugin.version}</version>
         <executions>
           <execution>
             <phase>package</phase>
@@ -41,6 +41,7 @@
       </plugin>
       <plugin>
         <artifactId>maven-javadoc-plugin</artifactId>
+        <version>${maven-javadoc.plugin.version}</version>
         <executions>
           <execution>
             <id>attach-javadocs</id>
@@ -52,6 +53,7 @@
       </plugin>
       <plugin>
         <artifactId>maven-dependency-plugin</artifactId>
+        <version>${maven-dependency.plugin.version}</version>
         <executions>
           <execution>
             <id>copy-dependencies</id>
@@ -294,10 +296,15 @@
     </snapshotRepository>
   </distributionManagement>
   <properties>
+    <junit.version>4.12</junit.version>
+    <maven-javadoc.plugin.version>2.10.4</maven-javadoc.plugin.version>
+    <maven-dependency.plugin.version>3.0.2</maven-dependency.plugin.version>
     <oncrpc4j.version>2.7.0</oncrpc4j.version>
-    <opennms.version>20.1.0</opennms.version>
-    <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
+    <opennms.version>20.1.0</opennms.version>
+    <maven-shade.plugin.version>2.4.3</maven-shade.plugin.version>
+    <mockito.version>2.2.26</mockito.version>
+    <maven.compiler.source>1.8</maven.compiler.source>
   </properties>
 </project>
 

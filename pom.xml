@@ -7,6 +7,13 @@
   <properties>
     <opennms.version>20.1.0</opennms.version>
     <oncrpc4j.version>2.7.0</oncrpc4j.version>
+    <junit.version>4.12</junit.version>
+    <mockito.version>2.2.26</mockito.version>
+    
+    <maven-shade.plugin.version>2.4.3</maven-shade.plugin.version>
+    <maven-javadoc.plugin.version>2.10.4</maven-javadoc.plugin.version>
+    <maven-dependency.plugin.version>3.0.2</maven-dependency.plugin.version>
+    
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
   </properties>
@@ -64,14 +71,14 @@
 	  <dependency>
 	    <groupId>junit</groupId>
 	    <artifactId>junit</artifactId>
-	    <version>4.12</version>
+	    <version>${junit.version}</version>
 	    <scope>test</scope>
 	  </dependency>
 	  <dependency>
 	    <groupId>org.mockito</groupId>
 	    <artifactId>mockito-core</artifactId>
 	    <scope>test</scope>
-	    <version>2.2.26</version>
+	    <version>${mockito.version}</version>
 	  </dependency>
 	  <dependency>
 	    <groupId>org.opennms.dependencies</groupId>
@@ -99,7 +106,7 @@
 	    <plugin>
 	      <groupId>org.apache.maven.plugins</groupId>
 	      <artifactId>maven-shade-plugin</artifactId>
-	      <version>2.4.3</version>
+	      <version>${maven-shade.plugin.version}</version>
 	      <executions>
 		<execution>
 		  <phase>package</phase>
@@ -147,6 +154,7 @@
 	    <plugin>
 	      <groupId>org.apache.maven.plugins</groupId>
 	      <artifactId>maven-javadoc-plugin</artifactId>
+	      <version>${maven-javadoc.plugin.version}</version>
 	      <executions>
 		<execution>
 		  <id>attach-javadocs</id>
@@ -160,6 +168,7 @@
 	    <plugin>
 	      <groupId>org.apache.maven.plugins</groupId>
 	      <artifactId>maven-dependency-plugin</artifactId>
+	      <version>${maven-dependency.plugin.version}</version>
 	      <executions>
 		<execution>
 		  <id>copy-dependencies</id>
