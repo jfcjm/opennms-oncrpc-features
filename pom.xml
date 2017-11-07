@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>fr.unijfc.monitoring.opennms</groupId>
   <artifactId>opennms-oncrpc</artifactId>
-  <version>1.20.1</version>
+  <version>1.20.1-SNAPSHOY</version>
   <properties>
     <opennms.version>20.1.0</opennms.version>
     <oncrpc4j.version>2.7.0</oncrpc4j.version>
