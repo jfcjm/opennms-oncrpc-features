@@ -20,11 +20,11 @@
   <distributionManagement>
     <repository>
       <id>sourcesup</id>
-      <url>https://sourcesup.renater.fr/nexus/content/repositories/oncrpcmonitor-releases</url>
+      <url>http://sourcesup.renater.fr/nexus/content/repositories/oncrpcmonitor-releases</url>
     </repository>
     <snapshotRepository>
       <id>sourcesup</id>
-      <url>https://sourcesup.renater.fr/nexus/content/repositories/oncrpcmonitor-snapshots</url>
+      <url>http://sourcesup.renater.fr/nexus/content/repositories/oncrpcmonitor-snapshots</url>
     </snapshotRepository>
   </distributionManagement>
   <repositories>
