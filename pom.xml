@@ -13,18 +13,18 @@
     <maven-shade.plugin.version>2.4.3</maven-shade.plugin.version>
     <maven-javadoc.plugin.version>2.10.4</maven-javadoc.plugin.version>
     <maven-dependency.plugin.version>3.0.2</maven-dependency.plugin.version>
-    
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
   </properties>
   <distributionManagement>
     <repository>
       <id>sourcesup</id>
-      <url>https://sourcesup.renater.fr/nexus/content/repositories/oncrpcmonitor/-releases</url>
+      <url>https://sourcesup.renater.fr/nexus/content/repositories/oncrpcmonitor-releases</url>
     </repository>
     <snapshotRepository>
       <id>sourcesup</id>
-      <url>https://sourcesup.renater.fr/nexus/content/repositories/oncrpcmonitor/-snapshots</url>
+      <url>https://sourcesup.renater.fr/nexus/content/repositories/oncrpcmonitor-snapshots</url>
     </snapshotRepository>
   </distributionManagement>
   <repositories>
