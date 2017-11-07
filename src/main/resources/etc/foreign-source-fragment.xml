@@ -1,0 +1,50 @@
+<! -- Invalide XML --></!>
+    <detector name="PORTMAP_V2" class="fr.univjfc.si.monitoring.opennms.detector.OncRpc.OncRpcDetector">
+	<parameter key="programTransport" value="tcp"/>
+  	<parameter key="programNumber" value="100024"/>
+  	<parameter key="programVersion" value="2"/>
+  	<parameter key="programMonitorRpc" value="0"/>
+      </detector>
+    <detector name="PORTMAP_V3" class="fr.univjfc.si.monitoring.opennms.detector.OncRpc.OncRpcDetector">
+	<parameter key="programTransport" value="tcp"/>
+  	<parameter key="programNumber" value="100024"/>
+  	<parameter key="programVersion" value="3"/>
+  	<parameter key="programMonitorRpc" value="0"/>
+      </detector>
+    <detector name="PORTMAP_V4" class="fr.univjfc.si.monitoring.opennms.detector.OncRpc.OncRpcDetector">
+	<parameter key="programTransport" value="tcp"/>
+  	<parameter key="programNumber" value="100024"/>
+  	<parameter key="programVersion" value="4"/>
+  	<parameter key="programMonitorRpc" value="0"/>
+      </detector>
+      <detector name="STATD_V1" class="fr.univjfc.si.monitoring.opennms.detector.OncRpc.OncRpcDetector">
+	<parameter key="programTransport" value="tcp"/>
+  	<parameter key="programNumber" value="100024"/>
+  	<parameter key="programVersion" value="1"/>
+  	<parameter key="programMonitorRpc" value="0"/>
+      </detector>
+      <detector name="NFS_V3" class="fr.univjfc.si.monitoring.opennms.detector.OncRpc.OncRpcDetector">
+	<parameter key="programTransport" value="tcp"/>
+  	<parameter key="programNumber" value="100003"/>
+  	<parameter key="programVersion" value="3"/>
+  	<parameter key="programMonitorRpc" value="0"/>
+      </detector>
+      <detector name="LOCKD_V3" class="fr.univjfc.si.monitoring.opennms.detector.OncRpc.OncRpcDetector">
+	<parameter key="programTransport" value="tcp"/>
+  	<parameter key="programNumber" value="100021"/>
+  	<parameter key="programVersion" value="3"/>
+  	<parameter key="programMonitorRpc" value="0"/>
+      </detector>
+      <detector name="NFS_V4" class="fr.univjfc.si.monitoring.opennms.detector.OncRpc.OncRpcDetector">
+	<parameter key="programTransport" value="tcp"/>
+  	<parameter key="programNumber" value="100003"/>
+  	<parameter key="programVersion" value="3"/>
+  	<parameter key="programMonitorRpc" value="0"/>
+      </detector>
+      <detector name="LOCKD_V4" class="fr.univjfc.si.monitoring.opennms.detector.OncRpc.OncRpcDetector">
+	<parameter key="programTransport" value="tcp"/>
+  	<parameter key="programNumber" value="100021"/>
+  	<parameter key="programVersion" value="4"/>
+  	<parameter key="programMonitorRpc" value="0"/>
+      </detector>
+      

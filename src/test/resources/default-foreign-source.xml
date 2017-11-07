@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<foreign-source name="default" xmlns="http://xmlns.opennms.org/xsd/config/foreign-source">
+<scan-interval>1d</scan-interval>
+<detectors>
+  <detector name="NFS_V3" class="fr.univjfc.si.monitoring.opennms.detector.OncRpc.OncRpcDetector" >
+  	<parameter key="portmapIpProtocolType" value="TCP"/>
+  	<parameter key="programNumber" value="100003"/>
+  	<parameter key="programVersion" value="3"/>
+  	<parameter key="programMonitorRpc" value="0"/>
+  </detector>
+  <detector name="NFS_V4" class="fr.univjfc.si.monitoring.opennms.detector.OncRpc.OncRpcDetector" >
+    <parameter key="usePortMapper" value="false"/>
+  	<parameter key="portmapIpProtocolType" value="TCP"/>
+  	<parameter key="programNumber" value="2049"/>
+  	<parameter key="programVersion" value="4"/>
+  	<parameter key="programMonitorRpc" value="0"/>
+  </detector>
+  <detector name="TestOncRpcServiceWithPortmap" class="fr.univjfc.si.monitoring.opennms.detector.OncRpc.OncRpcDetector" >
+    <parameter key="usePortMapper" value="true"/>
+  	<parameter key="portmapIpProtocolType" value="TCP"/>
+  	<parameter key="programNumber" value="2049"/>
+  	<parameter key="programVersion" value="4"/>
+  	<parameter key="programMonitorRpc" value="0"/>
+  </detector>
+  <detector name="TestOncRpcServiceWithoutPortmap" class="fr.univjfc.si.monitoring.opennms.detector.OncRpc.OncRpcDetector" >
+    <parameter key="usePortMapper" value="false"/>
+  	<parameter key="portmapIpProtocolType" value="TCP"/>
+  	<parameter key="programNumber" value="2049"/>
+  	<parameter key="programVersion" value="4"/>
+  	<parameter key="programMonitorRpc" value="0"/>
+  </detector>
+</detectors>
+</foreign-source>

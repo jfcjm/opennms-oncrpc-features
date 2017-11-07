@@ -1,0 +1,102 @@
+
+  <package name="NfsServer">
+    <filter><![CDATA[(IPADDR != '0.0.0.0') & (categoryName == 'NfsServerHost')]]></filter>
+    <rrd step = "30">
+      <rra>RRA:AVERAGE:0.5:1:20160</rra>
+      <rra>RRA:AVERAGE:0.5:12:44640</rra>
+      <rra>RRA:MIN:0.5:12:44640</rra>
+      <rra>RRA:MAX:0.5:12:44640</rra>
+    </rrd>
+    
+    <service name="STATD_V1" interval="30000" user-defined="false" status="on">
+	 <!--  Default values
+      <parameter key="portmap-port" value="111"/>
+      <parameter key="portmap-transport" value="tcp"/>
+      <parameter key="program-monitor-operation" value="0"/>
+      -->
+      <parameter key="program-number" value="100024"/>
+      <parameter key="program-version" value="1"/>
+      <parameter key="rrd-repository" value="/var/lib/opennms/rrd/response" />
+      <parameter key="rrd-base-name" value="statv1" />
+      <parameter key="ds-name" value="statv1" />
+    </service>
+    <service name="MOUNTD_V3" interval="30000" user-defined="false" status="on">
+	 <!--  Default values
+      <parameter key="portmap-port" value="111"/>
+      <parameter key="portmap-transport" value="tcp"/>
+      <parameter key="program-monitor-operation" value="0"/>
+      -->
+      <parameter key="program-number" value="100005"/>
+      <parameter key="program-version" value="3"/>
+      <parameter key="rrd-repository" value="/var/lib/opennms/rrd/response" />
+      <parameter key="rrd-base-name" value="mountv3" />
+      <parameter key="ds-name" value="mountv3" />
+      
+    </service>
+	<service name="NFS_V3" interval="30000" user-defined="false" status="on">
+	 <!--  Default values
+      <parameter key="portmap-port" value="111"/>
+      <parameter key="portmap-transport" value="tcp"/>
+      <parameter key="program-monitor-operation" value="0"/>
+      -->
+      <parameter key="program-number" value="100003"/>
+      <parameter key="program-version" value="3"/>
+      <parameter key="rrd-repository" value="/var/lib/opennms/rrd/response" />
+      <parameter key="rrd-base-name" value="nfsv3" />
+      <parameter key="ds-name" value="nfsv3" />
+    </service>
+    <service name="LOCKD_V3" interval="30000" user-defined="false" status="on">
+	 <!--  Default values
+      <parameter key="portmap-port" value="111"/>
+      <parameter key="portmap-transport" value="tcp"/>
+      <parameter key="program-monitor-operation" value="0"/>
+      -->
+      <parameter key="program-number" value="100021"/>
+      <parameter key="program-version" value="3"/>
+      <parameter key="rrd-repository" value="/var/lib/opennms/rrd/response" />
+      <parameter key="rrd-base-name" value="lockv3" />
+      <parameter key="ds-name" value="lockv3" />
+    </service>
+    <service name="NFS_V4" interval="30000" user-defined="false" status="on">
+	 <!--  Default values
+      <parameter key="portmap-port" value="111"/>
+      <parameter key="portmap-transport" value="tcp"/>
+      <parameter key="program-monitor-operation" value="0"/>
+      -->
+      <parameter key="program-number" value="100003"/>
+      <parameter key="program-version" value="4"/>
+      <parameter key="rrd-repository" value="/var/lib/opennms/rrd/response" />
+      <parameter key="rrd-base-name" value="nfsv4" />
+      <parameter key="ds-name" value="nfsv4" />
+    </service>
+    <service name="LOCKD_V4" interval="30000" user-defined="false" status="on">
+	 <!--  Default values
+      <parameter key="portmap-port" value="111"/>
+      <parameter key="portmap-transport" value="tcp"/>
+      <parameter key="program-monitor-operation" value="0"/>
+      -->
+      <parameter key="program-number" value="100021"/>
+      <parameter key="program-version" value="4"/>
+      <parameter key="rrd-repository" value="/var/lib/opennms/rrd/response" />
+      <parameter key="rrd-base-name" value="lockv4" />
+      <parameter key="ds-name" value="lockv4" />
+    </service>
+     
+     
+    <downtime interval="3000" begin="0" end="60000" /><!-- toutes les trois secondes pendant une minute -->
+    <downtime interval="10000" begin="60000" end="300000" /><!-- toutes les dix secondes pendant cinq minutes -->
+    <downtime interval="30000" begin="300000" end="43200000" /><!-- toutes les trentes secondes pendant jusqu'à 12 heures -->
+    <downtime interval="60000" begin="43200000" end="864000000" /><!-- toutes les minutes pendant 10 jours -->
+    <downtime begin="864000000" delete="true" /><!-- enlever le service au bout de 10jours -->
+	
+</package>
+<!-- 
+
+   <monitor service="NFS_V3" class-name="fr.univjfc.si.monitoring.opennms.monitor.OncRpc.OncRpcMonitor"/>
+   <monitor service="NFS_V4" class-name="fr.univjfc.si.monitoring.opennms.monitor.OncRpc.OncRpcMonitor"/>
+   <monitor service="STATD_V1" class-name="fr.univjfc.si.monitoring.opennms.monitor.OncRpc.OncRpcMonitor"/>
+   <monitor service="MOUNTD_V3" class-name="fr.univjfc.si.monitoring.opennms.monitor.OncRpc.OncRpcMonitor"/>
+   <monitor service="LOCKD_V3" class-name="fr.univjfc.si.monitoring.opennms.monitor.OncRpc.OncRpcMonitor"/>
+   <monitor service="LOCKD_V4" class-name="fr.univjfc.si.monitoring.opennms.monitor.OncRpc.OncRpcMonitor"/>
+
+ -->
