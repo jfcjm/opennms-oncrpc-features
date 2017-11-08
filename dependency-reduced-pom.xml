@@ -5,6 +5,7 @@
   <artifactId>opennms-oncrpc</artifactId>
   <version>1.20.1</version>
   <build>
+    <finalName>oncrpcmonitor</finalName>
     <plugins>
       <plugin>
         <artifactId>maven-shade-plugin</artifactId>
@@ -288,11 +289,11 @@
   <distributionManagement>
     <repository>
       <id>sourcesup</id>
-      <url>https://sourcesup.renater.fr/nexus/content/repositories/oncrpcmonitor/-releases</url>
+      <url>http://sourcesup.renater.fr/nexus/content/repositories/oncrpcmonitor-releases</url>
     </repository>
     <snapshotRepository>
       <id>sourcesup</id>
-      <url>https://sourcesup.renater.fr/nexus/content/repositories/oncrpcmonitor/-snapshots</url>
+      <url>http://sourcesup.renater.fr/nexus/content/repositories/oncrpcmonitor-snapshots</url>
     </snapshotRepository>
   </distributionManagement>
   <properties>
@@ -302,6 +303,7 @@
     <oncrpc4j.version>2.7.0</oncrpc4j.version>
     <maven.compiler.target>1.8</maven.compiler.target>
     <opennms.version>20.1.0</opennms.version>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven-shade.plugin.version>2.4.3</maven-shade.plugin.version>
     <mockito.version>2.2.26</mockito.version>
     <maven.compiler.source>1.8</maven.compiler.source>
