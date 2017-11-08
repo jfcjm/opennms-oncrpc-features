@@ -104,7 +104,6 @@
 	  </dependency>
 	</dependencies>
 	<build>
-	  <finalName>oncrpcmonitor</finalName>
 	  <plugins>
 	    <plugin>
 	      <groupId>org.apache.maven.plugins</groupId>
